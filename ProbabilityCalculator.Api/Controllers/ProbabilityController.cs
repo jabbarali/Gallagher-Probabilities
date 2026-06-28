@@ -11,7 +11,6 @@ public class ProbabilityController : ControllerBase
     {
         _service = service;
         _logService = logService;
-
     }
 
     [HttpPost]
