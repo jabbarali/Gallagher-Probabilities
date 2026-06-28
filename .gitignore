@@ -6,3 +6,5 @@
 /ProbabilityCalculator.Api/bin/Debug/net9.0
 /ProbabilityCalculator.Api/obj
 /ProbabilityCalculator.Api/ProbabilityCalculator.Api.csproj.user
+/ProbabilityCalculator.Api/Logs
+/ProbabilityCalculator.Api/probability_log.txt
