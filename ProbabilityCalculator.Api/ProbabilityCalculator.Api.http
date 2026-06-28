@@ -1,0 +1,15 @@
+@ProbabilityCalculator.Api_HostAddress = http://localhost:5288
+
+GET {{ProbabilityCalculator.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+POST {{ProbabilityCalculator.Api_HostAddress}}/probability/calculate
+Content-Type: application/json
+Accept: application/json
+
+{
+  "parameter1": 0.5,
+  "parameter2": 0.5,
+  "functionName": "Either"
+}
