@@ -1,7 +1,7 @@
 @ProbabilityCalculator.Api_HostAddress = http://localhost:5288
 
 ###
-POST {{ProbabilityCalculator.Api_HostAddress}}/probability/calculate
+POST {{ProbabilityCalculator.Api_HostAddress}}/api/v1.0/probability/calculate
 Content-Type: application/json
 Accept: application/json
 
@@ -11,5 +11,5 @@ Accept: application/json
   "functionName": "Either"
 }
 ###
-GET {{ProbabilityCalculator.Api_HostAddress}}/probability/logs
+GET {{ProbabilityCalculator.Api_HostAddress}}/api/v1.0/probability/logs
 Accept: application/json
