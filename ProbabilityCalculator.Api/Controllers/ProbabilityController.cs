@@ -1,4 +1,3 @@
-// Controllers/ProbabilityController.cs
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -6,10 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 public class ProbabilityController : ControllerBase
 {
     private readonly IProbabilityService _service;
+    private readonly IProbabilityLogService _logService;
 
-    public ProbabilityController(IProbabilityService service)
+    public ProbabilityController(IProbabilityService service, IProbabilityLogService logService)
     {
         _service = service;
+        _logService = logService;
+
     }
 
     [HttpPost]
@@ -20,6 +22,15 @@ public class ProbabilityController : ControllerBase
             return BadRequest(ModelState);
 
         var result = _service.Calculate(request);
+        _logService.Log(request, result, DateTime.UtcNow);
         return Ok(new { Result = result });
+    }
+
+    [HttpGet]
+    [Route("logs")]
+    public IActionResult GetLogs()
+    {
+        var entries = _logService.ReadAll();
+        return Ok(entries);
     }
 }

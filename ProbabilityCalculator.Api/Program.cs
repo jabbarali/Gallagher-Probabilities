@@ -1,3 +1,5 @@
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,9 +11,17 @@ builder.Services.AddControllers()
     });
 
 builder.Services.AddScoped<IProbabilityService, ProbabilityService>();
+builder.Services.AddScoped<IProbabilityLogService, ProbabilityLogService>();
+
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("Logs/probability_log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 

@@ -10,3 +10,6 @@ Accept: application/json
   "parameter2": 0.5,
   "functionName": "Either"
 }
+###
+GET {{ProbabilityCalculator.Api_HostAddress}}/probability/logs
+Accept: application/json
