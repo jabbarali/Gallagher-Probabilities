@@ -5,16 +5,7 @@ Probability Calculator is a web-based application that allows users to calculate
 ---
 ## Architecture
 ### Solution Structure
-ProbabilityCalculator/
-├── ProbabilityCalculator.Api/      # ASP.NET Core Web API (.NET 9)
-│   ├── Controllers/                # API controllers (e.g., ProbabilityController)
-│   ├── Models/                     # Data models (e.g., ProbabilityRequest, ProbabilityLogEntry)
-│   ├── Services/                   # Business logic and logging services
-│   ├── Program.cs                  # Application startup and configuration
-│   └── ProbabilityCalculator.Api.csproj
-└── ProbabilityCalculator.UI/       # React frontend
-    └── src/
-        └── App.jsx                 # Main React app and routing
+ProbabilityCalculator/ ├── ProbabilityCalculator.Api/      # ASP.NET Core Web API (.NET 9) │   ├── Controllers/                # API controllers (e.g., ProbabilityController) │   ├── Models/                     # Data models (e.g., ProbabilityRequest, ProbabilityLogEntry) │   ├── Services/                   # Business logic and logging services │   ├── Program.cs                  # Application startup and configuration │   └── ProbabilityCalculator.Api.csproj └── ProbabilityCalculator.UI/       # React frontend └── src/ └── App.jsx                 # Main React app and routing
 
 ### Backend (API)
 
