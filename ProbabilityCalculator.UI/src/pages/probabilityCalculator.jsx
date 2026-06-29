@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Calculator from '../components/Calculator';
 import CalculatorHistory from '../components/CalculatorHistory';
+import { apiConfig } from '../config/api';
 
 const functions = [
   { label: 'CombinedWith', value: 'CombinedWith' },
@@ -36,7 +37,7 @@ function ProbabilityCalculator() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://localhost:7249/api/v1.0/probability/calculate', {
+      const response = await fetch(apiConfig.probabilityCalculateUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -55,7 +56,7 @@ function ProbabilityCalculator() {
       const data = await response.json();
       setResult(data.result ?? data);
 
-      const logsResponse = await fetch('https://localhost:7249/api/v1.0/probability/logs');
+      const logsResponse = await fetch(apiConfig.probabilityLogsUrl);
       if (!logsResponse.ok) {
         throw new Error(`Logs request failed with status ${logsResponse.status}`);
       }
