@@ -76,3 +76,4 @@ The port on which the app is running will be mentioned on the terminal. For eg O
 
 - CORS is configured to allow any `localhost` origin for development convenience.
 - Calculation logs are stored in a file (`probability_log.txt`) and can be retrieved via the API.
+- Run the API unit tests via MS Test Explorer with Visual Studio
