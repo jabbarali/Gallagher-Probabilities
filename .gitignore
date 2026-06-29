@@ -8,3 +8,5 @@
 /ProbabilityCalculator.Api/ProbabilityCalculator.Api.csproj.user
 /ProbabilityCalculator.Api/Logs
 /ProbabilityCalculator.Api/probability_log.txt
+/ProbabilityCalculator.UI/dist
+/ProbabilityCalculator.UI/node_modules
