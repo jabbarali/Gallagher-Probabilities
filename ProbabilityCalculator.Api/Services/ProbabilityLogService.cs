@@ -41,6 +41,7 @@ public class ProbabilityLogService : IProbabilityLogService
                 // Optionally log or ignore malformed lines
             }
         }
-        return entries;
+        // Sort by Timestamp descending (newest first)
+        return entries.OrderByDescending(e => e.Timestamp);
     }
 }
