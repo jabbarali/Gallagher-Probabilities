@@ -4,8 +4,6 @@
 Probability Calculator is a web-based application that allows users to calculate probabilities using various functions and view a log of all calculations. The solution consists of a .NET 9 Web API backend and a React-based frontend.
 ---
 ## Architecture
-### Solution Structure
-ProbabilityCalculator/ ├── ProbabilityCalculator.Api/      # ASP.NET Core Web API (.NET 9) │   ├── Controllers/                # API controllers (e.g., ProbabilityController) │   ├── Models/                     # Data models (e.g., ProbabilityRequest, ProbabilityLogEntry) │   ├── Services/                   # Business logic and logging services │   ├── Program.cs                  # Application startup and configuration │   └── ProbabilityCalculator.Api.csproj └── ProbabilityCalculator.UI/       # React frontend └── src/ └── App.jsx                 # Main React app and routing
 
 ### Backend (API)
 
@@ -50,13 +48,13 @@ ProbabilityCalculator/ ├── ProbabilityCalculator.Api/      # ASP.NET Core 
 ### Run the UI:
 1. In a terminal, cd to the folder ProbabilityCalculator.UI
 Install dependencies
-npm install
+- npm install
 
 2. Build for bundling and modules transformation so the app is ready to run
-npm run build
+- npm run build
 
 3. launch the development server (run)
-npm run dev
+- npm run dev
 4.	Access the UI:
 The port on which the app is running will be mentioned on the terminal. For eg Open http://localhost:5174/ in your browser
 
