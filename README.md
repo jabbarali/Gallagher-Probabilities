@@ -44,7 +44,7 @@ Probability Calculator is a web-based application that allows users to calculate
 - [Node.js & npm](https://nodejs.org/)
 
 ### Run the API:
-Navigate to the fodler `ProbabilityCalculator.Api` and run the project (dotnet run or via Visual Studio 2022). Run in Debug mode (F5) or without debugging (Ctrl + F5). The project should install dependencies and run on port `7249`. Server side Serilog logs will be written in /Logs folder
+Navigate to the folder `ProbabilityCalculator.Api` and run the project (dotnet run or via Visual Studio 2022). Run in Debug mode (F5) or without debugging (Ctrl + F5). The project should install dependencies and run on port `7249`. Server side Serilog logs will be written in /Logs folder
 ### Run the UI:
 1. In a terminal, cd to the folder ProbabilityCalculator.UI
 Install dependencies
