@@ -48,13 +48,13 @@ Probability Calculator is a web-based application that allows users to calculate
 ### Run the UI:
 1. In a terminal, cd to the folder ProbabilityCalculator.UI
 Install dependencies
-- npm install
+`npm install`
 
 2. Build for bundling and modules transformation so the app is ready to run
-- npm run build
+`npm run build`
 
 3. launch the development server (run)
-- npm run dev
+`npm run dev`
 4.	Access the UI:
 The port on which the app is running will be mentioned on the terminal. For eg Open http://localhost:5174/ in your browser
 
