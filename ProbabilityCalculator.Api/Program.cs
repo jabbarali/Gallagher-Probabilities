@@ -32,13 +32,13 @@ builder.Host.UseSerilog();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:3000")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowLocalhostAnyPort", policy =>
+    {
+        policy.SetIsOriginAllowed(origin =>
+            origin.StartsWith("http://localhost") || origin.StartsWith("https://localhost"))
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
 });
 
 var app = builder.Build();
@@ -51,7 +51,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowReactApp");
+app.UseCors("AllowLocalhostAnyPort");
 
 app.UseAuthorization();
 
